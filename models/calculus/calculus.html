@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas code example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.9.1/math.min.js"></script>
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.5/jsxgraphcore.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<style>
+			body {
+				position: relative;
+			}
+			.affix {
+				top: 0;
+				width: 100%;
+				z-index: 9999 !important;
+			}
+			.navbar {
+				margin-bottom: 0px;
+			}
+
+			.affix  .container-fluid {
+				position: relative;
+				top: 50px;
+			}
+			#section1 {
+				padding-top: 10px;
+				height: 200px;
+				color: #fff;
+				background-color: #1E88E5;
+			}
+			#section2 {
+				padding-top: 10px;
+				height: 1200px;
+				color: #fff;
+				background-color: #673ab7;
+			}
+			#section3 {
+				padding-top: 10px;
+				height: 700px;
+				color: #fff;
+				background-color: #ff9800;
+			}
+			#section41 {
+				padding-top: 10px;
+				height: 200px;
+				color: #fff;
+				background-color: #00bcd4;
+			}
+			#section42 {
+				padding-top: 10px;
+				height: 600px;
+				color: #fff;
+				background-color: white;
+			}
+		</style>
+
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+
+		<div class="container-fluid" style="background-color:#F44336;color:#fff;height:250px;">
+			<h1>calculus on the graph</h1>
+			<h3>introduction</h3>
+			<p>
+				The word Calculus comes from Latin meaning "small stone",
+				<br>
+				Because it is like understanding something by looking at small pieces.
+				<br>
+				Differential Calculus cuts something into small pieces to find how it changes.
+				<br>
+				Integral Calculus joins (integrates) the small pieces together to find how much there is.
+			</p>
+		</div>
+
+		<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Calculus</a>
+				</div>
+				<div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#section1">Why calculus?</a>
+							</li>
+							<li>
+								<a href="#section2">Derivation</a>
+							</li>
+							<li>
+								<a href="#section3">Integral</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">The Model<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#section41">Model Instruction</a>
+									</li>
+									<li>
+										<a href="#section42">Model</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div id="section1" class="container-fluid">
+			<h1>Why calculus?</h1>
+			<p>
+				Calculus actually consists of two parts: the calculation of the integral and the derivative.
+				<br>
+				Differentiation is a tool where you can find an object’s velocity and acceleration based on the formula for that object’s position.
+				<br>
+				Likewise, if you know the object’s velocity you can find that object’s acceleration.
+				<br>
+				With integration, the opposite is true: you can find an object’s position if you know the object’s velocity or acceleration.
+				<br>
+				This is illustrated in the following diagram.
+
+			</p>
+		</div>
+		<div id="section2" class="container-fluid">
+			<h1>Derivation</h1>
+			<p>
+				In fact, if we want to understand deeply what is derivtion, we must understand what a slope is.
+				<br>
+				A slope is actually the change in X as a result of the change in Y,
+				to calculate this change between two points, we use the formula:
+				<br>
+				<br>
+				<img src="assets/slope.png" alt="Equations" style="width:250px;height:200px;">
+				<br>
+				<br>
+				The result is the average change of Y relative to X.
+				<br>
+				<p>
+				However, if we want to use the derived concept to give us conclusions about physics models, function behavior, etc.
+				<br>we need to know what is derived from a particular point.
+				<br><br>
+				<img src="assets/slopAtPoint.gif" alt="Equations" style="width:250px;height:200px;">
+				<br>
+				</p>
+				<br>
+				Here, the concept of the derivative comes into play.
+				<br>
+				<h2>how to find derivation</h2>
+				Remember the formula of the slop between two points?
+				<br>
+				well, in case of derivation we use a infinitesimal difference
+				<br>
+				Look at the following example to understand in greater detail the process for finding the derivative:
+				<div class="example">
+				<h3>Example: the function <b>f(x) = x<sup>2</sup> </b></h3>
+				<p>
+				We know <b>f(x) =  x<sup>2</sup></b>, and can calculate <b>f(x<span class="Larger">+&Delta;x</span>) </b>:
+				</p>
+				<div class="example2">
+				<table border="0">
+				<tbody>
+				<tr>
+				<td align="right">Start with:</td>
+				<td>&nbsp;</td>
+				<td><b>f(x<span class="Larger">+&Delta;x</span>) =  (x<span class="Larger">+&Delta;x</span>)<sup>2</sup></b></td>
+				</tr>
+				<tr>
+				<td align="right"> (x + &Delta;x)<sup>2</sup>&#8594;
+				</td> <td>&nbsp;</td>
+				<td><b>f(x<span class="Larger">+&Delta;x</span>) = x<sup>2</sup> + 2x &Delta;x + (&Delta;x)<sup>2</sup></b></td>
+				</tr>
+				</tbody>
+				</table>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<div class="example2">
+			<table border="0">
+				<tbody>
+					<tr>
+						<td>The slope formula is:</td>
+						<td><span class="intbl larger"> (<em>f(x+&Delta;x) - f(x)</em>)/ <strong>&Delta;x</strong> </span></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Put in <b>f(x<span class="Larger">+&Delta;x</span>)</b> and <b>f(x)</b>:</td>
+						<td><span class="intbl larger"> (<em>x<sup>2</sup> + 2x &Delta;x + (&Delta;x)<sup>2</sup> - x<sup>2</sup></em>)/ <strong>&Delta;x</strong> </span></td>
+					</tr>
+					<tr>
+						<td><span class="Larger">Simplify (x<sup>2</sup> and -x<sup>2</sup> cancel</span>):</td>
+						<td align="center"><span class="intbl larger"> (<em>2x &Delta;x + (&Delta;x)<sup>2</sup></em>)/ <strong>&Delta;x</strong> </span></td>
+					</tr>
+					<tr>
+						<td>Simplify  more (divide through by <span class="Larger">&Delta;x)</span>:</td>
+						<td align="center" class="larger">&nbsp; = 2x + &Delta;x</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+						<td align="center">&nbsp;</td>
+					</tr>
+					<tr>
+						<td>And then <span class="Larger"> <b>as &Delta;x</b></span><b> heads towards 0</b> we get:</td>
+						<td align="center" class="larger">= 2x</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<p>
+			&nbsp;
+		</p>
+		<p class="larger">
+			Result: the derivative of <b> x<sup>2</sup></b> is <b>2x</b>
+		</p>
+		</div>
+
+		</p>
+		</div>
+		<div id="section3" class="container-fluid">
+			<h1>Integral</h1>
+			<p>
+				<h2>so, what is an integral ? </h2>
+				well, integral in it's simple definition is a quicq way to increment a set of values,
+				<br>
+				and its symbole is &int;.
+				<br>
+				<h2>why to use it ? </h2>
+				With integral we can find displacement (from velocity) and velocity (from acceleration) using the indefinite integral.
+				<br>
+				we can find area under the graph, we can use the integral to find the volume of an object, and much more.
+				<br>
+				<h2>Example of use</h2>
+				One of the application of the integral is calculating the area under the graph.
+				<br>
+				so lets say we want to find the area under a graph, one way to do this is to divide the region into five segment(mark as yellow):
+				<br>
+				<br>
+				<img src="assets/integral.png" alt="graph" style="width:250px;height:200px;">
+				<br>
+				and to draw rectangle inside each segment, the sum of the area of these rectangle is an estimate of the area under the graph.
+				<br>
+				We can see that the approximation is pretty bad, because the rectangles are not suitable for space within the graph.
+				<br>
+				If, on the other hand, we try to divide the graph into smaller sections, and draw rectangles (we will denote green)
+				We can see a better approximation.
+				<br>
+				Thus, the approximation of the real area under the graph will be higher as the division under the graph will be greater.
+				<br>
+
+			</p>
+		</div>
+		<div id="section41" class="container-fluid">
+			<h1>Model instruction</h1>
+			<p>
+				In the next section, you can dynamically see the relationship between a function and the functions derived from it.
+				Try changing the function by moving the points A, B, C and see what happens to the functions derived from it.
+			</p>
+			<p>
+				In addition, the model shows one of the significant applications of the integral, ie the calculation of the area under the graph.
+				Move the red dot to see how the Calculated area changes, or press start to let the space change dynamically.
+			</p>
+
+		</div>
+		<div id="section42" class="container-fluid">
+
+			<div class="col-sm-6 col-md-offset-3">
+				<h1>The Model</h1>
+
+				<div id="jsxgbox" style="overflow: hidden; position: relative;">
+					<svg  style="overflow: hidden; width: 400px; height: 400px;"></svg>
+				</div>
+				<button id="goButt" class="btn btn-primary btn-lg">
+					Start
+				</button>
+			</div>
+		</div>
+		
+		<div class="container">
+				 <ul class="pager">
+    <li><a href="../modelList.html">Previous</a></li>
+  </ul>
+	</div>
+
+		<script src="calculus.js"></script>
+
+		<!------------------my model---------------------------------->
+
+	</body>
+</html>

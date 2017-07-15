@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head><title>Canvas code example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.9.1/math.min.js"></script>
+<!--relase from remark when copy to eclipse-->
+<!--<script src="wikiVisionTemplate/js/editor.js"></script>-->
+  <script type="text/javascript"
+ src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.5/jsxgraphcore.js"></script>  
+</head>
+<body  >
+  
+<div class="container">
+  <h1>angular velocity versues linear velocity!</h1>  
+  <div class="row description">
+    <div class="well">
+      <h2>angular velocity</h2>
+      Two different perspectives for measuring a particle's motion are its angular velocity and its linear velocity.<br>
+      The angular velocity of a particle traveling on a circular path is the ratio of the angle traversed to the amount of time it takes to traverse that angle.<br>
+     &omega; = &theta;/t <br>  
+     <img src="angular.png" class="img-rounded" alt="" width="304" height="236">           
+    </div>
+    <div class="well">
+      <h2>Linear Velocity</h2>
+      Linear velocity is the velocity of the object travelling in a straight line or in other words the body is said to be moving with linear velocity when its direction is not changing.
+      <br>
+      Linear velocity, as we know, depends on the distance an object travels with respect to time. The linear equation or the linear formula is given below:<br>
+      
+      <img src="linear.png" class="img-rounded" alt="" width="304" height="236"> 
+    </div>
+       <div class="well">
+      <h2>Linear Velocity & angular velocity</h2>
+         Linear velocity applies to any object or particle that moves, while angular velocity applies to those that turn (such as a wheel, the revolution of the earth, or a spinning top).
+         <br>
+         To determine linear velocity (linear displacement over time) from angular velocity, apply the formula: v=wr , where ω is expressed in radians/time and r is the radius of the path taken (or the radius of the object, if it is spinning).
+    
+      
+    </div>
+    
+    
+  </div>
+  
+  
+  
+  
+  <div class="row">
+    <div class="col-sm-6" >
+    	
+    	  <div class="panel panel-info">
+      <div class="panel-heading">Change the radius of the circle </div>
+      <div class="panel-body">Click Start, Observe the effect on the linear velocity and the angular velocity.<br> Click the "Start" button to begin the animation.</div>
+    </div>
+    	
+      
+    </div>
+    <div class="col-sm-6" >
+    	
+    	   	  <div class="panel panel-info">
+      <div class="panel-heading">Look at the v = &omega;*r graph </div>
+      <div class="panel-body">Click Start, change the radis and see the relation between the angular velocity to linear velocity </div>
+    </div>
+   	
+    </div>
+  </div><!--end second row-->
+  
+  <div class="row">
+    
+    <div class="col-md-6 ">         
+      <div id="jxgbox" style="overflow: hidden; position: relative;">
+        <svg width="460" height="120" style="overflow: hidden; width: 535px; height: 250px;"></svg>      
+      </div>
+      <button id="runBTN" class="btn btn-primary">Start</button>
+    </div>
+    
+    <div class="col-md-6 ">       
+      <div id="jxgbox2" class ="graphVW" style="overflow: hidden; position: relative;">
+        <svg width="460" height="120" style="overflow: hidden; width: 535px; height: 250px;"></svg>        
+      </div>
+    </div>
+    
+    
+  </div><!--end third row-->
+  
+  <div class="row">
+    <div class="col-md-6 ">         
+      <div id="jxgbox0" class ="sliderVW" style="overflow: hidden; position: relative;">
+        <svg width="460" height="120" style="overflow: hidden; width: 535px; height: 250px;"></svg>
+      </div>
+    </div>
+    
+  </div><!--end four row-->
+  
+  
+    <ul class="pager">
+   <li><a href="../modelList.html">Previous</a></li>
+  </ul>
+        
+</div><!--container-->
+	
+  
+
+  
+
+<script src="velocity.js"></script>
+</body>
+</html>

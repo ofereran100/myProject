@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.5/jsxgraphcore.js"></script>
+		<title>Page Title</title>
+		
+			<style>
+			body {
+				
+				background-image: url("assets/colorBackGround.jpg");
+				background-repeat: repeat-y;
+				background-position: right; 
+				
+			}
+			#jxgbox{
+				position: absolute;
+                left: -200px;
+				
+			}
+
+		</style>
+		
+	</head>
+	<body>
+
+		<div class="gtco-container">
+			<h1>Trigonometric Ratios - Interactive Graph</h1>
+			<p>
+				We claim that these 2 trigonometric identities are correct, for any angle.
+			</p>
+			<blockquote>
+				<p>
+					`tan theta = (sin theta) / (cos theta)`, and
+				</p>
+				<p>
+					`sin^2 theta + cos^2 theta = 1`
+				</p>
+			</blockquote>
+			<h2>Interactive Graph - Circle and trig identities</h2>
+			<p>
+				You can explore the identities `tan theta = (sin theta) / (cos theta)` and `sin^2 theta + cos^2 theta = 1`<br>
+				 in the following JSXGraph.
+			</p>
+			<h3>Things to do</h3>
+			<p>
+				1. Drag point P around the circle.
+			</p>
+			<p>
+				2. Observe the values given for `sin theta`, `cos theta` (and their squares), and `tan theta` for different angles.
+			</p>
+			<p>
+				3. Observe the `x`- and `y`-values for the point P in the (light gray) tooltip that appears as you drag.
+			</p>
+			<p>
+				Hopefully you can see that:
+			</p>
+			<blockquote>
+				<p>
+					`tan theta = (sin theta) / (cos theta)`
+				</p>
+			</blockquote>
+			<p>
+				and
+			</p>
+			<blockquote>
+				<p>
+					`sin^2 theta + cos^2 theta = 1`
+				</p>
+			</blockquote>
+			<p>
+				for any angle `theta`.
+			</p>
+			
+			<p id="output"></p>
+		<div id="jxgbox1" class="jxgbox explanation" style="overflow: hidden; position: relative;">
+			<svg width="650" height="450"></svg>
+		</div>
+
+			<ul class="pager">
+				<li>
+					<li><a href="../modelList.html">Previous</a></li>
+				</li>
+			</ul>
+		</div>
+
+		
+
+		<script src="trigo.js"></script>
+	</body>
+</html>

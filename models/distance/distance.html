@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.5/jsxgraphcore.js"></script>
+		<title>Page Title</title>
+
+		<style>
+			body {
+				
+				background-image: url("assets/colorBackGround.jpg");
+				background-repeat: repeat-y;
+				background-position: right; 
+				
+			}
+			#jxgbox{
+				position: absolute;
+                left: -200px;
+				
+			}
+
+		</style>
+	</head>
+	<body >
+
+		<div class="container">
+			<div >
+				<div class="gtco-container">
+					<h1 align="center">Distance Formula</h1>
+					<p>
+						We have a right angled triangle with hypotenuse length c, as shown:
+					</p>					
+					<img src="abc.jpg"/>
+					<p>
+						Recall Pythagoras' Theorem, which tells us the length of the longest side (the hypotenuse):
+					</p>
+					<blockquote>
+						<p class="formula">
+							`c=&radic;(a^2+b^2)`
+						</p>
+					</blockquote>
+					<p>
+						We use this to find the distance between any two points <span class="intmath">(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>)</span> and <span class="intmath">(<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>)</span> on the cartesian <span class="wall">(<i>x</i>-<i>y</i>)</span> plane:
+					</p>
+
+					</blockquote>
+					<p>
+						The point <i>B</i> (<i>x</i><sub>2</sub>, <i>y</i><sub>1</sub>) is at the right angle. We can see that:
+					</p>
+					<ul>
+						<li>
+							The distance between the points <span class="intmath"><i>A</i>(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>)</span> and <span class="intmath"><i>B</i>(<i>x</i><sub>2</sub>, <i>y</i><sub>1</sub>)</span> is
+							simply <i>x</i><sub>2</sub> &minus; <i>x</i><sub>1</sub> and
+						</li>
+						<li>
+							The distance between the points <span class="intmath"><i>C</i>(<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>)</span> and <span class="intmath"><i>B</i>(<i>x</i><sub>2</sub>, <i>y</i><sub>1</sub>)</span> is
+							simply <i>y</i><sub>2</sub> &minus; <i>y</i><sub>1</sub>.
+						</li>
+					</ul>
+
+					<p>
+						Using Pythagoras' Theorem we can develop a formula for the distance <i>d</i>.
+					</p>
+
+					<h2>Distance Formula</h2>
+					<p>
+						The distance between <span class="intmath">(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>)</span> and <span class="intmath">(<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>)</span> is given by:
+					</p>
+					<blockquote>
+						<p class="formula">
+							`d=&radic;((x_2-x_1)^2+(y_2-y_1)^2`
+						</p>
+					</blockquote>
+					<p>
+						<b>Note:</b> Don't worry about which point you choose for (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) (it can be the first or second point given), because the answer works out the same.
+					</p>
+					<h2>Interactive Graph - Distance Formula</h2>
+					<p>
+						You can explore the concept of distance formula in the following JSXGraph (it's not a fixed image).
+					</p>
+					<p>
+						<b>Drag</b> either point A or point B to investigate how the distance formula works.
+					</p>
+
+					<div id="jxgbox" class="jxgbox explanation" style="overflow: hidden; position: relative;">
+						<svg style="overflow: hidden; width: 200px; height: 400px;"></svg>
+
+					</div>
+
+				</div>
+
+			</div>
+			<ul class="pager">
+				<li></li>
+			</ul>
+		</div>
+
+		<div class="container">
+			<ul class="pager">
+				<li>
+					<a href="../modelList.html">Previous</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="distance.js"></script>
+	</body>
+</html>

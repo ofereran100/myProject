@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas code example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.5/jsxgraphcore.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<style>
+			body {
+				position: relative;
+			}
+			.affix {
+				top: 0;
+				width: 100%;
+				z-index: 9999 !important;
+			}
+			.navbar {
+				margin-bottom: 0px;
+			}
+
+			.affix ~
+			.container-fluid {
+				position: relative;
+				top: 50px;
+			}
+			#section1 {
+				padding-top: 50px;
+				height: 500px;
+				color: #fff;
+				background-color: #1E88E5;
+			}
+			#section2 {
+				padding-top: 50px;
+				height: 500px;
+				color: #fff;
+				background-color: #673ab7;
+			}
+			#section3 {
+				padding-top: 50px;
+				height: 500px;
+				color: #fff;
+				background-color: #ff9800;
+			}
+			#section41 {
+				padding-top: 50px;
+				height: 700px;
+				color: #fff;
+				background-color: #00bcd4;
+			}
+			#section42 {
+				padding-top: 10px;
+				height: 600px;
+				color: #fff;
+				background-color: white;
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+		<div class="container-fluid" style="background-color:#F44336;color:#fff;height:200px;">
+			<h1>The Pendulum</h1>
+			<h3>introduction</h3>
+			<p>
+				In this model we would like to show the relationship between harmonic motion and the mathematical equations that sustain it.
+				At the same time, we would like to show the physical principles that are hidden behind these equations in an interracial way by a model that can be visualized.
+				At the bottom of the page, after a short explanation you can experiment with yourself.
+			</p>
+		</div>
+
+		<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">The Pendulum</a>
+				</div>
+				<div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="#section1">What Is a Pendulum?</a>
+							</li>
+							<li>
+								<a href="#section2">Simple harmonic motion</a>
+							</li>
+							<li>
+								<a href="#section3">Pendulum illustration</a>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">The Model<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#section41">Model Instruction</a>
+									</li>
+									<li>
+										<a href="#section42">Model</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div id="section1" class="container-fluid">
+			<h1>What Is a Pendulum?</h1>
+			<p>
+				A pendulum is a mass hung from a stationary point in a way that allows it to swing freely back and forth.
+				A simple pendulum is one where we treat the mass as a mass point that is equally concentrated,
+				and the string from which it hangs is of negligible mass.
+				Simple pendulums are interesting from a physics perspective because they are an example of simple harmonic motion.
+
+			</p>
+			<p>
+				<br>
+				<img src="assets/pendulum1.png" />
+			</p>
+
+		</div>
+		<div id="section2" class="container-fluid">
+			<h1>Simple harmonic motion</h1>
+			<p>
+				Simple harmonic motion is any periodic motion where a restoring force is applied that is proportional to the displacement and in the opposite direction of that displacement.
+				Or in other words, the more you pull it one way, the more it wants to return to the middle.
+				This is easy to imagine with a spring because you feel the increased tug as you stretch it more and more.
+
+				But what about a pendulum? Well, when you lift a pendulum to one side, the force of gravity wants to pull it back down,
+				and the tension in the string wants to pull it left (or right). These combined forces work together to pull it back towards the middle (the equilibrium position).
+				Ultimately, upon reaching the middle, the pendulum's velocity has increased,
+				so it continues past the equilibrium position and off to the other side. This pattern then continues.
+			</p>
+			<p>
+				<br>
+				<img src="assets/pendulum2.png" />
+			</p>
+
+		</div>
+		<div id="section3" class="container-fluid">
+			<h1>Pendulum illustration</h1>
+			<p>
+				<video width="320" height="240" controls>
+					<source src="assets/pendulumVideo.mp4" type="video/mp4">
+					<source src="assets/pendulumVideo.ogg" type="video/ogg">
+					Your browser does not support the video tag.
+				</video>
+
+			</p>
+		</div>
+		<div id="section41" class="container-fluid">
+			<h1>Model instruction</h1>
+			<p>
+				We are talking about a simple pendulum which means that the mass is specific and the force that returns proportional to the pendulum distance from the point of equality.
+				The equation of simple harmonic motion is actually:
+				<br>
+				<img src="assets/pendulumEq3.png" />
+				<br>
+			</p>
+			<p>
+				We would like to examine the parameters of the equation in order to understand its meaning.
+				  Let's look at the parameter T, what affects the cycle time of the pendulum movement?
+				It can be assumed that the mass of the pendulum affects cycle time, as increasing the mass may affect the desire of the mass to remain in place.
+				That is, you need to take longer time to complete a traffic cycle.
+				On the other hand, if we increase the mass, the gravitational force will increase as well. As a result, the force responsible for pulling the thread to the point of equality will increase, and indeed we are talking about forces that will balance each other.
+				Try to change the mass in the model and see that there is no change in pendulum motion.
+			</p>
+
+			<p>
+				What can still affect the pendulum's cycle time?
+				Well, the cycle time of the pendulum is calculated by the equation:
+				<img src="assets/pendulumEq1.png" />
+				It can be assumed from the equation that increasing the length of the wire will increase the cycle time,
+				and indeed try to increase the length of the wire in the model and observe the time it takes the pendulum to complete the cycle.
+			</p>
+			<p>
+				But why? Well, why the length of the thread affects the time of the pendulum cycle is related to inertia, or more specifically the equation:
+				<br>
+				<img src="assets/inerationEqu.jpg" height="100px" width="150px" / >
+				<br>
+				That is, increasing L increases the torque of inertia, which means how hard it is to accelerate at some angular velocity any mass. This means that the larger the torque the greater the torque, and the more mass it takes to complete the cycle time.
+				Try increasing the cycle time in the model and see the result.
+
+			</p>
+		</div>
+		<div id="section42" class="container-fluid">
+
+			<div class="col-sm-6 col-md-offset-3">
+				<h1>The Model</h1>
+
+				<div id="jxgbox1" style="overflow: hidden; position: relative;">
+					<svg  style="overflow: hidden; width: 400px; height: 400px;"></svg>
+				</div>
+				<button id="goButt" class="btn btn-primary btn-lg">
+					Start
+				</button>
+			</div>
+
+		</div>
+
+		<div class="container">
+			<ul class="pager">
+				<li>
+					<a href="../modelList.html">Previous</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="pendulum.js"></script>
+
+	</body>
+</html>
